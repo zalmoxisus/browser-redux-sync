@@ -1,12 +1,14 @@
-let sync, storage;
+let configureSync, sync, storage;
 
 if (chrome.storage) {
+  configureSync = require('./configure');
   sync = require('./sync');
   storage = require('./storage');
 }
 else {
+  configureSync = {};
   sync = require('redux-persist-crosstab');
   storage = localStorage;
 }
 
-export { sync, storage };
+export { configureSync, sync, storage };
