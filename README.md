@@ -1,17 +1,18 @@
 # Cross-browser extensions and Chrome apps states syncing
-Add syncing to your [redux](https://github.com/gaearon/redux) browser (Chrome and [Firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities#storage)) extension or app with 1 line. 
+Add syncing to your [redux](https://github.com/gaearon/redux) browser (Chrome and [Firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities#storage)) extension or app. 
 It listens to the `chrome.storage` for [redux-persist](https://github.com/rt2zz/redux-persist) events. When an event occurs it will dispatch a rehydrate action.
+
 If `chrome.storage` is not defined (for Safari and old versions of Firefox), it includes [redux-persist-crosstab](https://github.com/rt2zz/redux-persist-crosstab) to use `localStorage`.
 
 ### Usage
 ```js
 import { createStore, compose } from 'redux'
 import { persistStore, autoRehydrate } from 'redux-persist'
-import sync from 'browser-redux-sync'
+import { configureSync, sync } from 'browser-redux-sync'
 const finalCreateStore = compose(autoRehydrate())(createStore)
 const store = finalCreateStore(reducer)
 
-const persistor = persistStore(store, {})
+const persistor = persistStore(store, configureSync())
 sync(persistor)
 ```
 
