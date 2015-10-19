@@ -1,6 +1,6 @@
 var constants = require('redux-persist/constants');
-var matches = require('lodash/utility/matches');
 var keyPrefix = constants.keyPrefix;
+var matches = require('lodash/utility/matches');
 
 function sync(persistor, config){
   if (config === undefined) config = {};
@@ -23,4 +23,4 @@ function sync(persistor, config){
   }
 }
 
-module.exports = chrome.storage ? sync : require('redux-persist-crosstab');
+module.exports = sync;
