@@ -1,0 +1,33 @@
+{
+  "name": "browser-redux-sync",
+  "version": "0.2.0",
+  "description": "Keep redux states in sync for browser extensions and apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zalmoxisus/browser-redux-sync.git"
+  },
+  "homepage": "https://github.com/zalmoxisus/browser-redux-sync",
+  "keywords": [
+    "redux",
+    "chrome storage",
+    "extension",
+    "app",
+    "chrome",
+    "firefox"
+  ],
+  "dependencies": {
+    "redux-persist-crosstab": "^1.0.1"
+  },
+  "peerDependencies": {
+    "redux-persist": ">1.0.0"
+  },
+  "authors": [
+    "zalmoxisus <zalmoxisus@gmail.com>",
+    "rt2zz <zack@root-two.com>"
+  ],
+  "license": "MIT"
+}
