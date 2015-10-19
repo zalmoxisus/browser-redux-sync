@@ -20,6 +20,7 @@
     "firefox"
   ],
   "dependencies": {
+    "lodash": "^3.10.1",
     "redux-persist-crosstab": "^1.0.1"
   },
   "peerDependencies": {
