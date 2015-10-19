@@ -2,8 +2,15 @@
   "name": "browser-redux-sync",
   "version": "0.2.0",
   "description": "Keep redux states in sync for browser extensions and apps.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "clean": "rimraf lib dist coverage",
+    "lint": "eslint src test examples",
+    "build": "babel src --out-dir lib",
+    "preversion": "npm run clean && npm run check",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && npm run clean && npm run docs:publish",
+    "prepublish": "npm run clean && npm run build",
     "test": "eslint ."
   },
   "repository": {
@@ -19,6 +26,13 @@
     "chrome",
     "firefox"
   ],
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "isparta": "^3.0.3",
+    "rimraf": "^2.3.4"
+  },
   "dependencies": {
     "lodash": "^3.10.1",
     "redux-persist-crosstab": "^1.0.1"
