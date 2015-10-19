@@ -1,4 +1,4 @@
-# Cross-browser extensions and Chrome apps states syncing
+## Cross-browser extensions and Chrome apps states syncing
 Add syncing to your [redux](https://github.com/gaearon/redux) browser (Chrome and [Firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities#storage)) extension or app. 
 It listens to the `chrome.storage` for [redux-persist](https://github.com/rt2zz/redux-persist) events. When an event occurs it will dispatch a rehydrate action.
 
