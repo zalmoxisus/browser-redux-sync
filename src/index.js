@@ -1,12 +1,12 @@
 let configureSync, sync, storage;
 
-if (chrome.storage) {
+if (chrome && chrome.storage) {
   configureSync = require('./configure');
   sync = require('./sync');
   storage = require('./storage');
 }
 else {
-  configureSync = {};
+  configureSync = () => {};
   sync = require('redux-persist-crosstab');
   storage = localStorage;
 }
