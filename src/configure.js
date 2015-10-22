@@ -5,6 +5,7 @@ export default function configureSync(config = {}) {
     ...config,
     storage: storage,
     serialize: data => data,
-    deserialize: data => data
+    deserialize: data => data,
+    debounce: 0
   }
 }
