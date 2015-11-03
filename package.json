@@ -1,6 +1,6 @@
 {
   "name": "browser-redux-sync",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "description": "Keep redux states in sync for browser extensions and apps.",
   "main": "lib/index.js",
   "scripts": {
