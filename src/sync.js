@@ -16,9 +16,7 @@ function sync(persistor, config){
       if(whitelist && whitelist.indexOf(keyspace) === -1){ return }
       if(blacklist && blacklist.indexOf(keyspace) !== -1){ return }
 
-      persistor.rehydrate(keyspace, e[key].newValue, function(){
-        //@TODO handle errors?
-      })
+      persistor.rehydrate({ [keyspace]: e[key].newValue })
     }
   }
 }
