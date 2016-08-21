@@ -38,7 +38,7 @@
     "redux-persist-crosstab": "^1.0.1"
   },
   "peerDependencies": {
-    "redux-persist": "3.x"
+    "redux-persist": "3.5.x"
   },
   "authors": [
     "zalmoxisus <zalmoxisus@gmail.com>",

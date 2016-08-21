@@ -1,5 +1,5 @@
 var constants = require('redux-persist/constants');
-var keyPrefix = constants.keyPrefix;
+var keyPrefix = constants.KEY_PREFIX;
 var isEqual = require('lodash/lang/isEqual');
 
 function sync(persistor, config){
